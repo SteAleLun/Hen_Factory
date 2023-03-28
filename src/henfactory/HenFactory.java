@@ -1,19 +1,19 @@
 package henfactory;
 
 import hen.Hen;
-import henbreeds.BelarusianHen;
-import henbreeds.MoldovanHen;
-import henbreeds.RussianHen;
-import henbreeds.UkrainianHen;
+import henbreeds.*;
 
 public class HenFactory {
 
-    public static Hen getHen(String breed){
-        if(breed.equals("Russian")) return new RussianHen();
-        if(breed.equals("Ukrainian")) return new UkrainianHen();
-        if(breed.equals("Moldovan")) return new MoldovanHen();
-        if(breed.equals("Belarusian")) return new BelarusianHen();
+    public static Hen getHen(Breed breed){
+
+        if(breed == Breed.RUSSIAN) return new RussianHen();
+        if(breed == Breed.UKRAINIAN) return new UkrainianHen();
+        if(breed == Breed.MOLDOVAN) return new MoldovanHen();
+        if(breed == Breed.BELARUSIAN) return new BelarusianHen();
+
         else return null;
+
     }
 
 }
