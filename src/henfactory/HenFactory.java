@@ -7,12 +7,18 @@ public class HenFactory {
 
     public static Hen getHen(Breed breed){
 
-        if(breed == Breed.RUSSIAN) return new RussianHen();
-        if(breed == Breed.UKRAINIAN) return new UkrainianHen();
-        if(breed == Breed.MOLDOVAN) return new MoldovanHen();
-        if(breed == Breed.BELARUSIAN) return new BelarusianHen();
+        switch (breed){
 
-        else return null;
+            case RUSSIAN: return new RussianHen();
+
+            case UKRAINIAN: return new UkrainianHen();
+
+            case MOLDOVAN: return new MoldovanHen();
+
+            case BELARUSIAN: return new BelarusianHen();
+
+            default: return null;
+        }
 
     }
 

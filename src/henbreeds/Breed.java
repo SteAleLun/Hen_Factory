@@ -6,4 +6,5 @@ public enum Breed {
     UKRAINIAN,
     MOLDOVAN,
     BELARUSIAN
+
 }
